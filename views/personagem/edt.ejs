@@ -1,0 +1,33 @@
+<%-include('../cabecalho.ejs')%>
+ <header>
+        <h3>Editar Personagem</h3>
+      </header>
+      <div class="content">
+        <form id="form-personagem" method="post" autocomplete="off" >
+          <div class="grid">
+            <div>
+              <label for="nome">Nome do Personagem</label>
+              <input id="nome" value="<%=personagem.nome%>" name="nome" type="text" placeholder="Ex: Narito Uzumaki" required>
+            </div>
+            <div>
+              <label for="aldeia">Aldeia</label>
+              <input id="aldeia" name="aldeia" type="text" placeholder="Ex: Vila da Folha" required>
+            </div>
+           <div class="grid">
+            <div>
+              <label for="elementos">Elementos</label>
+              <input id="elementos" name="elementos" type="text" placeholder="Terra" required>
+            </div>
+            </br>
+             <label for="graduacao">Graduação</label>
+              <input id="graduacao" name="graduacao" type="text" placeholder="Jounin" required>
+            </div>
+           <div class="field-help">Os campos com * são obrigatórios.</div>
+          <footer>
+            <a type="button" class="btn ghost" id="btn-cancelar" href="/personagem/lst">Cancelar</a>
+            <button type="submit" class="btn primary">Editar Personagem</button>
+          </footer>
+        </form>
+      </div>
+
+  <%-include('../rodape.ejs')%>

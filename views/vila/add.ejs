@@ -1,0 +1,56 @@
+<%-include('../cabecalho.ejs')%>
+  <header>
+    <h3>Adicionar Nova Vila</h3>
+  </header>
+  <div class="content">
+    <form id="form-vila" method="post" enctype="multipart/form-data" autocomplete="off" action="/vila/add/ok">
+
+      <div class="grid">
+        
+        <div>
+          <label for="nome">Nome da Vila</label>
+          <input id="nome" name="nome" type="text" placeholder="Ex: Konoha"  required>
+        </div>
+        </br>
+        <div class="grid">
+          <div>
+            <label for="pais">País</label>
+            <input id="pais" name="pais" type="text" placeholder="Ex: País da Folha" required>
+          </div>
+          </br>
+          <div>
+            <label for="kage">Kage</label>
+            <input id="kage" name="kage" type="text" placeholder="Ex: Hokage" required>
+          </div>
+           </br>
+           <div>
+            <label for="fundador">Fundador</label>
+            <input id="fundador" name="fundador" type="text" placeholder="Ex: Hashirama" required>
+          </div>
+           </br>
+          <footer>
+            <a type="button" class="btn ghost" id="btn-cancelar" href="/vila/lst">Cancelar</a>
+            <button type="submit" class="btn primary">Adicionar Vila</button>
+          </footer>
+    </form>
+  </div>
+
+  <%-include('../rodape.ejs')%>
+
+    <script>
+      function previewFoto(event) {
+        const file = event.target.files[0];
+        const preview = document.getElementById('preview');
+
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            preview.src = e.target.result;
+            preview.style.display = 'block';
+          }
+          reader.readAsDataURL(file);
+        } else {
+          preview.style.display = 'none';
+        }
+      }
+    </script>

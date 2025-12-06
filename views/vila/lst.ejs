@@ -1,0 +1,70 @@
+<%-include('../cabecalho.ejs')%>
+<section class="section">
+  <div style="display:flex; align-items:end; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+    <div>
+      <h2>Vilas</h2>
+      <p>Nome,país,kage e Fundador.</p>
+    </div>
+    <div class="actions">
+      <a href="/vila/add" class="btn primary">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 5a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H6a1 1 0 110-2h5V6a1 1 0 011-1z"/></svg>
+        Adicionar Vila
+      </a>
+    </div>
+  </div>
+  <!--Formulário de pesquisa-->
+<div style="flex: 0 0 auto; width: 70%;">
+<form action="" method="post">
+<input type="text" name="pesquisa" id="" placeholder="Proucure a Vila aqui" style="width: 80%; padding:8px; border:1px solid var(--border); border-radius:8px;">
+<button type="submit" class="icon-btn" title="Editar" aria-label="Editar">
+<!--isso aqui é o desenho de uma lupa-->
+
+<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-
+linejoin="round">
+
+<circle cx="11" cy="11" r="8"/>
+<line x1="21" y1="21" x2="16.65" y2="16.65"/>
+</svg>
+<!--terminou-->
+</button>
+</form>
+</div>
+<!--fim do formulário de pesquisa-->
+  <div class="table-wrap" style="margin-top:14px;">
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>País</th>
+          <th>Kage</th>
+          <th>Fundador</th>
+          <th class="actions-cell">Ações</th>
+        </tr>
+      </thead>
+      <%vila.forEach(vila=>{%>
+      <tbody>
+        <tr>
+          <td><%=vila.nome%></td>
+          <td><%=vila.pais%></td>
+          <td><%=vila.kage%></td>
+          <td><%=vila.fundador%></td>
+          <td class="actions-cell">
+            <a href="/vila/edt/<%=vila.id%>">
+            <button class="icon-btn" title="Editar" aria-label="Editar">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>
+            </button>
+          </a>
+              <a href="/vila/del/<%= vila.id %>">    
+                <button class="icon-btn" title="Excluir" aria-label="Excluir">
+               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg>
+                </button>
+              </a>
+          </td>
+        </tr>
+         <%})%>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<%-include('../rodape.ejs')%>

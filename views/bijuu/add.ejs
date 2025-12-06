@@ -1,0 +1,40 @@
+     <%-include('../cabecalho.ejs')%>
+     <header>
+        <h3>Adicionar Nova Bijuu</h3>
+      </header>
+      <div class="content">
+        <form id="form-bijuu" method="post" autocomplete="off" action="/bijuu/add/ok">
+          <div class="grid">
+            <div>
+              <label for="nome">Nome da Bijuu</label>
+              <input id="nome" name="nome" type="text" placeholder="Ex: Kyuubi" required>
+            </div>
+           </br>
+
+             <div class="content">
+        <form id="form-bijuu" method="post" autocomplete="off" action="/bijuu/add/ok">
+          <div class="grid">
+            <div>
+              <label for="hospedeiro">Hospedeiro</label>
+              <input id="hospedeiro" name="hospedeiro" type="text" placeholder="Ex: Naruto" required>
+            </div>
+            </br>
+
+             <div class="content">
+        <form id="form-bijuu" method="post" autocomplete="off" action="/bijuu/add/ok">
+          <div class="grid">
+            <div>
+              <label for="ndecaudas">N° de Caudas</label>
+              <input id="ndecaudas" name="ndecaudas" type="text" placeholder="Ex: 7 Caudas" required>
+            </div>
+            </br>
+
+     
+          <footer>
+            <a type="button" class="btn ghost" id="btn-cancelar" href="/bijuu/lst">Cancelar</a>
+            <button type="submit" class="btn primary">Adicionar Bijuu</button>
+          </footer>
+        </form>
+      </div>
+
+      <%-include('../rodape.ejs')%>

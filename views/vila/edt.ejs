@@ -1,0 +1,32 @@
+<%-include('../cabecalho.ejs')%>
+ <header>
+        <h3>Editar Vila</h3>
+      </header>
+      <div class="content">
+        <form id="form-vila" method="post" autocomplete="off" >
+          <div class="grid">
+            <div>
+              <label for="nome">Nome do Vila</label>
+              <input id="nome" value="<%=vila.nome%>" name="nome" type="text" placeholder="Ex: Konoha" required>
+            </div>
+            <div>
+              <label for="nome">País</label>
+              <input id="pais" value="<%=vila.pais%>" name="pais" type="text" placeholder="Ex: País da Folha" required>
+            </div>
+             <div>
+              <label for="nome">Kage</label>
+              <input id="kage" value="<%=vila.kage%>" name="kage" type="text" placeholder="Ex: Hokage" required>
+            </div>
+            <div>
+              <label for="nome">Fundador</label>
+              <input id="fundador" value="<%=vila.fundador%>" name="fundador" type="text" placeholder="Ex: Hashirama" required>
+            </div>
+           <div class="field-help">Os campos com * são obrigatórios.</div>
+          <footer>
+            <a type="button" class="btn ghost" id="btn-cancelar" href="/vila/lst">Cancelar</a>
+            <button type="submit" class="btn primary">Editar Vila</button>
+          </footer>
+        </form>
+      </div>
+
+  <%-include('../rodape.ejs')%>

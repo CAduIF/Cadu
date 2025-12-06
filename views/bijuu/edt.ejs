@@ -1,0 +1,30 @@
+<%-include('../cabecalho.ejs')%>
+ <header>
+        <h3>Editar Bijuu</h3>
+      </header>
+      <div class="content">
+        <form id="form-arco" method="post" autocomplete="off" >
+          <div class="grid">
+            <div>
+              <label for="nome">Nome da Bijuu</label>
+              <input id="nome" value="<%=bijuu.nome%>" name="nome" type="text" placeholder="Ex: Kyuubi" required>
+            </div>
+              <div>
+              <label for="nome">Hospedeiro</label>
+              <input id="hospedeiro" value="<%=bijuu.hospedeiro%>" name="hospedeiro" type="text" placeholder="Ex: Naruto" required>
+            </div>
+              <div>
+              <label for="nome">N de Caudas</label>
+              <input id="ndecaudas" value="<%=bijuu.ndecaudas%>" name="ndecaudas" type="text" placeholder="Ex: 7 caudas" required>
+            </div>
+           
+     
+           <div class="field-help">Os campos com * são obrigatórios.</div>
+          <footer>
+            <a type="button" class="btn ghost" id="btn-cancelar" href="/bijuu/lst">Cancelar</a>
+            <button type="submit" class="btn primary">Editar Arco</button>
+          </footer>
+        </form>
+      </div>
+
+  <%-include('../rodape.ejs')%>
