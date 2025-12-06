@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 // Caminho correto das views e public
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-app.use(express.static(__dirname + '../public'))
+
 // COLOCAR OS MODELS AQUI (colocar o caminho ../)
 import Bijuu from '../models/Bijuu.js';
 import Personagem from '../models/Personagem.js';
